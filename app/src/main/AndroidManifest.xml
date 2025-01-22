@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.theemergency_1"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 필수 권한 선언 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TheEmergency_1">
+
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDEuIWd2O4RVjVv8jVSCpWL4q4xQ149n-U" />
+
+        <!-- MainActivity: 앱의 진입점 -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Camera Activity -->
+        <activity android:name=".Camera"
+            android:exported="false">
+            <!-- 외부에서 접근할 필요가 없는 경우 false로 설정 -->
+        </activity>
+
+        <!-- Recorder Activity -->
+        <activity android:name=".RecorderActivity"
+            android:exported="false">
+            <!-- 외부에서 접근할 필요가 없는 경우 false로 설정 -->
+        </activity>
+
+        <!-- EmergencyCall Activity -->
+        <activity android:name=".EmergencyCall"
+            android:exported="false">
+            <!-- 외부에서 접근할 필요가 없는 경우 false로 설정 -->
+        </activity>
+
+        <!-- Map Activity -->
+        <activity android:name=".MapActivity"
+            android:exported="false">
+            <!-- 외부에서 접근할 필요가 없는 경우 false로 설정 -->
+        </activity>
+
+        <!-- Home Activity -->
+        <activity android:name=".Home"
+            android:exported="false">
+            <!-- 외부에서 접근할 필요가 없는 경우 false로 설정 -->
+        </activity>
+
+        <!-- Settings Activity -->
+        <activity android:name=".Settings"
+            android:exported="false">
+            <!-- 외부에서 접근할 필요가 없는 경우 false로 설정 -->
+        </activity>
+
+        <!-- AudioRecordService 선언 -->
+        <service
+            android:name=".AudioRecordService"
+            android:exported="false"
+            android:foregroundServiceType="microphone" />
+        <!-- foregroundServiceType을 microphone으로 설정 -->
+
+        <!-- 기타 활동들 선언 -->
+    </application>
+
+</manifest>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/Police"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="경찰"
+        android:textSize="35sp"
+        />
+
+    <Button
+        android:id="@+id/FireAgency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="소방서"
+        android:textSize="35sp"
+        />
+
+    <Button
+        android:id="@+id/CivilRights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="민원신고"
+        android:textSize="35sp"
+        />
+
+</LinearLayout>

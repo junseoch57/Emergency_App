@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#505050"
+        android:layout_weight="5">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="10dp"
+                />
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="bottom"
+                />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:layout_gravity="center_vertical">
+
+        <android.widget.Button
+            android:id="@+id/Recorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="#505050"
+            android:textColor="#E0E0E0"
+            android:drawableStart="@drawable/record_imgxml"
+            android:drawablePadding="-70dp"
+            android:drawableTint="#00FF00"
+            android:text="녹음기"
+            android:textSize="35sp"
+            android:paddingHorizontal="50dp"/>
+
+        <android.widget.Button
+            android:id="@+id/Camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:background="#505050"
+            android:textColor="#E0E0E0"
+            android:drawableStart="@drawable/camera_testxml"
+            android:drawablePadding="-70dp"
+            android:drawableTint="#0000FF"
+            android:text="카메라"
+            android:textSize="35sp"
+            android:paddingHorizontal="50dp"/>
+
+        <android.widget.Button
+            android:id="@+id/emrgCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:background="#505050"
+            android:textColor="#E0E0E0"
+            android:drawableStart="@drawable/call_imgxml"
+            android:drawablePadding="-70dp"
+            android:drawableTint="#FF0000"
+            android:text="긴급전화"
+            android:textSize="35sp"
+            android:paddingHorizontal="50dp"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#303030"
+        android:layout_weight="2"
+        >
+
+
+        <android.widget.Button
+            android:id="@+id/Map"
+            android:layout_width="50dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="#F1F3F4"
+            android:textColor="#4285F4"
+            android:drawableStart="@drawable/map_imgxml"
+            android:drawableTint="#4285F4"
+            android:paddingHorizontal="160dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:background="#202020"
+        >
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"/>
+        <android.widget.Button
+            android:id="@+id/Home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="#505050"
+            android:textColor="#E0E0E0"
+            android:drawableTop="@drawable/home_imgxml"
+            android:drawablePadding="-30dp"/>
+
+        <android.widget.Button
+            android:id="@+id/Settings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="#505050"
+            android:textColor="#E0E0E0"
+            android:drawableTop="@drawable/setting_imgxml"
+            android:drawablePadding="-30dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

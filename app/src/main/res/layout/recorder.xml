@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#080808"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="   ←  "
+        android:textSize="31sp"
+        android:layout_marginStart="9sp"
+        android:layout_marginTop="8sp"
+        android:background="@drawable/btn_round_dgrey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/recordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  녹음 시작  "
+            android:textSize="35sp"
+            android:background="@drawable/btn_round_dgrey"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/overlayImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/talk"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:clickable="true"
+        />
+
+</FrameLayout>
